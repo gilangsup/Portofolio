@@ -27,7 +27,7 @@ const TextSpan = ({children}) => {
        animate={controls}
        onMouseOver={() => {if(!isplaying)rubberBand()}}
        onAnimationComplete={() => setIsplaying(false)}
-       className='text-5xl inline-block'>
+      className=' lg:text-6xl bg-gradient-to-r from-[#FAC5EB] via-[#FFFFFF] to-indigo-400 inline-block text-transparent bg-clip-text'>
       {children}
     </motion.span>
   )
