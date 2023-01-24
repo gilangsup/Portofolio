@@ -38,17 +38,17 @@ const Profile = () => {
                             <p className='mt-5'>About me<ExpandMore fontSize="large" className='cursor-pointer' /></p>
                             : <ExpandLess fontSize="large" className='cursor-pointer' />}
                     </p>
-                    <Collapse in={!open} timeout="auto" unmountOnExit>
+                    <Collapse in={open} timeout="auto" unmountOnExit>
                         <motion.p
                             initial={{ y: "50%", opacity: 0, scale: 0.5 }}
                             animate={{y: 0, opacity: 1, scale: 1}}
                             exit={{ y: "50%", opacity: 0, transition: {duration: 0.1} }}
                             transition={{duration: 0.2, ease: "easeOut"}}
-                            className='text-xl mt-5'>I am a Frontend Engineer who has graduated from Alterra Academy Bootcamp.
-                            I learned technology especially website development since 2019 .
-                            I am interested in front-end development because I like to learn ReactJS, HTML , CSS and Javascript .
-                            I’m seeking employment as a Frontend Engineer with a company where
-                            I can implement my ability and grow up either my skills or personality.</motion.p>
+                            className='text-xl mt-5'>Had experiences as freelance developer by developing website using PHP and MySQL, I gained my
+                            technical knowledge and skill by joining Frontend program in Alterra Academy. Beside learning Javascript,
+                            ReactJs, HTML, and CSS, I also created individual and collaborations projects there.
+                            Currently, I'm looking for Frontend Engineer position with a company where I can implement my ability
+                            and grow up either my skills or personal growth.</motion.p>
                     </Collapse>
 
                 </div>

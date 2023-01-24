@@ -1,97 +1,104 @@
 import React from 'react'
-import { motion, useAnimationControls } from 'framer-motion'
-import Collapse from '@mui/material/Collapse';
-import ListItemText from '@mui/material/ListItemText';
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
+import eoBoz from '../assets/homeboz.png'
+import stayapp from '../assets/stayapp.png'
+import altaDashboard from '../assets/altaDashboar.png'
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
 
 const Projects = () => {
 
-    const [open, setOpen] = React.useState(true);
-    const [open1, setOpen1] = React.useState(true);
-    const [open2, setOpen2] = React.useState(true);
-
-    const handleClick = () => {
-        setOpen(!open);
+    const style = {
+        position: 'absolute',
+        top: '15%',
+        left: '5%',
+        transform: 'translate(-50%, -50%)',
+        width: 350,
+        bgcolor: 'background.paper',
+        border: '2px solid #000',
+        boxShadow: 24,
+        p: 4,
     };
 
-    const handleClick1 = () => {
-        setOpen1(!open1);
-    }
+    const [open, setOpen] = React.useState(false);
+    const [open1, setOpen1] = React.useState(false);
+    const [open2, setOpen2] = React.useState(false);
 
-    const handleClick2 = () => {
-        setOpen2(!open2);
-    }
 
-  return (
-    <div className='container px-20 py-20 mx-auto'>
-        <div className='text-white'>
-           <p className='text-4xl flex justify-center'>My projects</p>
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+    const handleOpen1 = () => setOpen1(true);
+    const handleClose1 = () => setOpen1(false);
+    const handleOpen2 = () => setOpen2(true);
+    const handleClose2 = () => setOpen2(false);
+  
+    return (
+        <div className='container px-20 py-20'>
+            <div data-aos="fade-right" className='text-white'>
+                <p className='text-4xl'>My projects</p>
+            </div>
+            <div className='grid sm:grid-cols-1 lg:grid-cols-3 gap-3 my-10'>
+                <div data-aos="fade-up-right" className='text-white text-left'>
+                    <a className='cursor-pointer text-2xl' onClick={handleOpen}>Eo-Bozz</a>
+                    <Modal
+                        open={open}
+                        onClose={handleClose}
+                        aria-labelledby="modal-modal-title"
+                        aria-describedby="modal-modal-description"
+                    >
+                        <Box data-aos="flip-left" sx={style}>
+                            <img src={eoBoz}/>
+                            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                                <span className='font-bold'>EO-Bozz</span><br/>is an application that provides EO (Event Organizer) services with various choices, verified
+                                and clear reviews of the activities that the EO has handled. Become an intermediary between the EO
+                                and customers who need their services so as to prevent the above problems from happening in your
+                                life. We built this website with Javascript library React-Vite and deploy with Vercel. See the source on
+                                <a href="https://github.com/gilangsup/EO-Bozz-Frontend-ReactJS" target="_blank" className='cursor-pointer'> Github</a> for detail.
+                            </Typography>
+                        </Box>
+                    </Modal>
+                </div>
+                <div data-aos="fade-up-left" className='text-white text-left'>
+                    <a className='cursor-pointer text-2xl' onClick={handleOpen1}>Stay-App</a>
+                    <Modal
+                        open={open1}
+                        onClose={handleClose1}
+                        aria-labelledby="modal-modal-title"
+                        aria-describedby="modal-modal-description"
+                    >
+                        <Box data-aos="flip-left" sx={style}>
+                            <img src={stayapp} />
+                            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                                <span className='font-bold'>Stay</span><br />Stay is a web app marketplace for homestays and short-term experiences. We built this website with
+                                Javascript framework NextJS and deploy with Netlify. We were inspired by Airbnb but with our own
+                                sense of design. See the source on Github for detail.
+                                <a href="https://github.com/gilangsup/Stay-App-Frontend" target="_blank" className='cursor-pointer'> Github</a> for detail.
+                            </Typography>
+                        </Box>
+                    </Modal>
+                </div>
+                <div data-aos="fade-up-right" className='text-white text-left'>
+                    <a className='cursor-pointer text-2xl' onClick={handleOpen2}>Alta Dashboard</a>
+                    <Modal
+                        open={open2}
+                        onClose={handleClose2}
+                        aria-labelledby="modal-modal-title"
+                        aria-describedby="modal-modal-description"
+                    >
+                        <Box data-aos="flip-left" sx={style}>
+                            <img src={altaDashboard} />
+                            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                                <span className='font-bold'>Stay</span><br />Alta Dashboard is an online reporting website dashboard that manages data simulations, classes,
+                                users & mentors from Alterra Academy. We build this website with library Javascript React-Vite and
+                                other tools like Redux and DaisyUI. See the source on Github for detail.
+                                <a href="https://github.com/gilangsup/Dashboard-Alta" target="_blank" className='cursor-pointer'> Github</a> for detail.
+                            </Typography>
+                        </Box>
+                    </Modal>
+                </div>
+            </div>
         </div>
-        <div className='grid grid-cols-3 gap-3'>
-              <div data-aos="fade-right" className='text-white text-left'>
-                  <p className='flex flex-col' onClick={handleClick}>
-                      <ListItemText />
-                      {open ?
-                          <p className='mt-5'>About me<ExpandMore fontSize="large" className='cursor-pointer' /></p>
-                          : <ExpandLess fontSize="large" className='cursor-pointer' />}
-                  </p>
-                  <Collapse in={!open} timeout="auto" unmountOnExit>
-                      <motion.p
-                          initial={{ y: "50%", opacity: 0, scale: 0.5 }}
-                          animate={{ y: 0, opacity: 1, scale: 1 }}
-                          exit={{ y: "50%", opacity: 0, transition: { duration: 0.1 } }}
-                          transition={{ duration: 0.2, ease: "easeOut" }}
-                          className='text-xl mt-5'>I am a Frontend Engineer who has graduated from Alterra Academy Bootcamp.
-                          I learned technology especially website development since 2019 .
-                          I am interested in front-end development because I like to learn ReactJS, HTML , CSS and Javascript .
-                          I’m seeking employment as a Frontend Engineer with a company where
-                          I can implement my ability and grow up either my skills or personality.</motion.p>
-                  </Collapse>
-              </div>
-              <div data-aos="fade-right" className='text-white text-left'>
-                  <p className='flex flex-col' onClick={handleClick1}>
-                      <ListItemText />
-                      {open1 ?
-                          <p className='mt-5'>About me<ExpandMore fontSize="large" className='cursor-pointer' /></p>
-                          : <ExpandLess fontSize="large" className='cursor-pointer' />}
-                  </p>
-                  <Collapse in={!open1} timeout="auto" unmountOnExit>
-                      <motion.p
-                          initial={{ y: "50%", opacity: 0, scale: 0.5 }}
-                          animate={{ y: 0, opacity: 1, scale: 1 }}
-                          exit={{ y: "50%", opacity: 0, transition: { duration: 0.1 } }}
-                          transition={{ duration: 0.2, ease: "easeOut" }}
-                          className='text-xl mt-5'>I am a Frontend Engineer who has graduated from Alterra Academy Bootcamp.
-                          I learned technology especially website development since 2019 .
-                          I am interested in front-end development because I like to learn ReactJS, HTML , CSS and Javascript .
-                          I’m seeking employment as a Frontend Engineer with a company where
-                          I can implement my ability and grow up either my skills or personality.</motion.p>
-                  </Collapse>
-              </div>
-              <div data-aos="fade-right" className='text-white text-left'>
-                  <p className='flex flex-col' onClick={handleClick2}>
-                      <ListItemText />
-                      {open2 ?
-                          <p className='mt-5'>About me<ExpandMore fontSize="large" className='cursor-pointer' /></p>
-                          : <ExpandLess fontSize="large" className='cursor-pointer' />}
-                  </p>
-                  <Collapse in={!open2} timeout="auto" unmountOnExit>
-                      <motion.p
-                          initial={{ y: "50%", opacity: 0, scale: 0.5 }}
-                          animate={{ y: 0, opacity: 1, scale: 1 }}
-                          exit={{ y: "50%", opacity: 0, transition: { duration: 0.1 } }}
-                          transition={{ duration: 0.2, ease: "easeOut" }}
-                          className='text-xl mt-5'>I am a Frontend Engineer who has graduated from Alterra Academy Bootcamp.
-                          I learned technology especially website development since 2019 .
-                          I am interested in front-end development because I like to learn ReactJS, HTML , CSS and Javascript .
-                          I’m seeking employment as a Frontend Engineer with a company where
-                          I can implement my ability and grow up either my skills or personality.</motion.p>
-                  </Collapse>
-              </div>
-        </div>
-    </div>
-  )
+    )
 }
 
 export default Projects
