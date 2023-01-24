@@ -22,7 +22,6 @@ const Profile = () => {
     };
 
     const sentence = "Hi, Im Gilang Suprobo".split("");
-    console.log("a", sentence)
 
     return (
         <div className='container px-20 py-20'>
