@@ -36,6 +36,9 @@ const Projects = () => {
         <div className='container px-20 py-20'>
             <div data-aos="fade-right" className='text-white'>
                 <p className='text-4xl'>My projects</p>
+                <p className='my-5'>With Alterra Academy, I created 3 projects which were all projects we worked on with the backend. 
+                I used the React library to build all projects and deploy them with Vercel, here are my projects.
+                </p>
             </div>
             <div className='grid sm:grid-cols-1 lg:grid-cols-3 gap-3 my-10'>
                 <div data-aos="fade-up-right" className='text-white text-left'>

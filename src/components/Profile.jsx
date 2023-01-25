@@ -1,15 +1,9 @@
 import React from 'react'
-import PhotoProfile from '../assets/pp.png'
 import TextSpan from './TextSpan';
 import ListItemText from '@mui/material/ListItemText';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemButton from '@mui/material/ListItemButton';
 import Collapse from '@mui/material/Collapse';
-import List from '@mui/material/List';
-import StarBorder from '@mui/icons-material/StarBorder';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { motion, useAnimationControls } from 'framer-motion'
 
 
