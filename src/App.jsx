@@ -13,16 +13,10 @@ const slides = [
 function App() {
 
   return (
-      <div className="w-full min-h-screen bg-gradient-to-r from-[#0f0c29] to-[#302b63]  ...">
+      <div className="max-w-screen min-h-screen bg-gradient-to-r from-[#0f0c29] to-[#302b63] ...">
         <Profile/>
-      <Projects/>
-      <div className="max-w-lg ">
-      <Carousel>
-        {...slides.map((s) => 
-          <img className="flex justify-center" src={s}/>
-        )}
-      </Carousel>
-      </div>
+        <Projects/>
+        <Carousel/>
       </div>
 
   )
