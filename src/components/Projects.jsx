@@ -35,14 +35,14 @@ const Projects = () => {
     return (
         <div className='container px-20 py-20'>
             <div data-aos="fade-right" className='text-white'>
-                <p className='text-4xl'>My projects</p>
+                <p className='text-6xl'>My projects</p>
                 <p className='my-5'>With Alterra Academy, I created 3 projects which were all projects we worked on with the backend. 
                 I used the React library to build all projects and deploy them with Vercel, here are my projects.
                 </p>
             </div>
             <div className='grid sm:grid-cols-1 lg:grid-cols-3 gap-3 my-10'>
                 <div data-aos="fade-up-right" className='text-white text-left'>
-                    <a className='cursor-pointer text-2xl' onClick={handleOpen}>Eo-Bozz</a>
+                    <a className='cursor-pointer text-2xl underline underline-offset-6' onClick={handleOpen}>Eo-Bozz</a>
                     <Modal
                         open={open}
                         onClose={handleClose}
@@ -62,7 +62,7 @@ const Projects = () => {
                     </Modal>
                 </div>
                 <div data-aos="fade-up-left" className='text-white text-left'>
-                    <a className='cursor-pointer text-2xl' onClick={handleOpen1}>Stay-App</a>
+                    <a className='cursor-pointer underline underline-offset-6 text-2xl' onClick={handleOpen1}>Stay-App</a>
                     <Modal
                         open={open1}
                         onClose={handleClose1}
@@ -81,7 +81,7 @@ const Projects = () => {
                     </Modal>
                 </div>
                 <div data-aos="fade-up-right" className='text-white text-left'>
-                    <a className='cursor-pointer text-2xl' onClick={handleOpen2}>Alta Dashboard</a>
+                    <a className='cursor-pointer underline underline-offset-6 text-2xl' onClick={handleOpen2}>Alta Dashboard</a>
                     <Modal
                         open={open2}
                         onClose={handleClose2}
