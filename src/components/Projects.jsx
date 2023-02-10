@@ -34,9 +34,9 @@ const Projects = () => {
   
     return (
         <div className='container px-20 py-20'>
-            <div data-aos="fade-right" className='text-white'>
-                <p className='text-6xl'>My projects</p>
-                <p className='my-5'>With Alterra Academy, I created 3 projects which were all projects we worked on with the backend. 
+            <div data-aos="fade-right" className='text-white overflow-x-hidden'>
+                <p className='text-4xl'>My projects</p>
+                <p className='my-5 text-xl'>With Alterra Academy, I created 3 projects which is all projects we worked on with the backend. 
                 I used the React library to build all projects and deploy them with Vercel, here are my projects.
                 </p>
             </div>
@@ -92,7 +92,7 @@ const Projects = () => {
                             <img src={altaDashboard} />
                             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                                 <span className='font-bold'>Stay</span><br />Alta Dashboard is an online reporting website dashboard that manages data simulations, classes,
-                                users & mentors from Alterra Academy. We build this website with library Javascript React-Vite and
+                                users & mentors from Alterra Academy. We built this website with library Javascript React-Vite and
                                 other tools like Redux and DaisyUI. See the source on Github for detail.
                                 <a href="https://github.com/gilangsup/Dashboard-Alta" target="_blank" className='cursor-pointer'> Github</a> for detail.
                             </Typography>
