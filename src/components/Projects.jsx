@@ -38,7 +38,7 @@ const Projects = () => {
             <div data-aos="fade-right" className='text-white overflow-x-hidden'>
                 <p className='text-4xl'>My projects</p>
                 <p className='my-5 text-lg'>I have created 3 projects which is all projects i worked on with the backend. 
-                I used the React library to build all projects and deploy them with Vercel
+                I used the React library to build all projects and deploy them with Vercel.
                 <p className='mt-5'>Lets check my projects below</p>
                 </p>
             </div>

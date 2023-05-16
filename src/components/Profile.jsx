@@ -29,7 +29,7 @@ const Profile = () => {
                             
                         )
                     })}
-                    <img src='https://i.pinimg.com/originals/1f/e8/00/1fe800748f1c9bafd70488f1062e76f1.gif' className='w-[100px] flex justify-end'/>
+                    <img src='https://i.pinimg.com/originals/1f/e8/00/1fe800748f1c9bafd70488f1062e76f1.gif' className='w-[100px]'/>
                     </div>
                     <p className='flex flex-col' onClick={handleClick}>
                         <ListItemText />
