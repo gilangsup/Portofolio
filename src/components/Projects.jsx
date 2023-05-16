@@ -33,11 +33,13 @@ const Projects = () => {
     const handleClose2 = () => setOpen2(false);
   
     return (
-        <div className='container px-20 py-20'>
+        <div className='container px-20 py-20 text-left'>
+            <section>
             <div data-aos="fade-right" className='text-white overflow-x-hidden'>
                 <p className='text-4xl'>My projects</p>
-                <p className='my-5 text-xl'>With Alterra Academy, I created 3 projects which is all projects we worked on with the backend. 
-                I used the React library to build all projects and deploy them with Vercel, here are my projects.
+                <p className='my-5 text-lg'>I have created 3 projects which is all projects i worked on with the backend. 
+                I used the React library to build all projects and deploy them with Vercel
+                <p className='mt-5'>Lets check my projects below</p>
                 </p>
             </div>
             <div className='grid sm:grid-cols-1 lg:grid-cols-3 gap-3 my-10'>
@@ -81,7 +83,7 @@ const Projects = () => {
                     </Modal>
                 </div>
                 <div data-aos="fade-up-right" className='text-white text-left'>
-                    <a className='cursor-pointer underline underline-offset-6 text-2xl' onClick={handleOpen2}>Alta Dashboard</a>
+                    <a className='cursor-pointer underline underline-offset-6 text-2xl' onClick={handleOpen2}>Dashboard Office</a>
                     <Modal
                         open={open2}
                         onClose={handleClose2}
@@ -91,7 +93,7 @@ const Projects = () => {
                         <Box data-aos="flip-left" sx={style}>
                             <img src={altaDashboard} />
                             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                                <span className='font-bold'>Stay</span><br />Alta Dashboard is an online reporting website dashboard that manages data simulations, classes,
+                                <span className='font-bold'>Stay</span><br />Dashboard Office is an online reporting website dashboard that manages data simulations, classes,
                                 users & mentors from Alterra Academy. We built this website with library Javascript React-Vite and
                                 other tools like Redux and DaisyUI. See the source on Github for detail.
                                 <a href="https://github.com/gilangsup/Dashboard-Alta" target="_blank" className='cursor-pointer'> Github</a> for detail.
@@ -100,6 +102,7 @@ const Projects = () => {
                     </Modal>
                 </div>
             </div>
+            </section>
         </div>
     )
 }

@@ -1,5 +1,6 @@
 
 import Carousel from "./components/Carousel";
+import Footer from "./components/Footer";
 import Profile from "./components/Profile"
 import Projects from './components/Projects';
 
@@ -13,10 +14,12 @@ const slides = [
 function App() {
 
   return (
-      <div className="max-w-screen min-h-screen bg-gradient-to-r from-[#0f0c29] to-[#302b63] ...">
+    
+      <div className="max-w-screen min-h-screen text-white bg-gradient-to-r from-[#000000] to-[#434343] ...">
         <Profile/>
         <Projects/>
         <Carousel/>
+        <Footer/>
       </div>
 
   )

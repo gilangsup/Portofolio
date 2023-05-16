@@ -15,9 +15,10 @@ export default class CenterMode extends Component {
             centerPadding: "250px",
             slidesToShow: 3,
             speed: 500,
+            autoplay: true,
         };
         return (
-            <div data-aos="fade-right" className="text-white container px-20 py-20 ">
+            <div data-aos="fade-right" className="text-white container px-20 py-20 w-full">
             <div>
                 <h2 className="my-10 text-4xl text-center">Technology Skills</h2>
                 <Slider {...settings}>
