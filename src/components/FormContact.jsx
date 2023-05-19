@@ -2,9 +2,9 @@ import { Button, Form, Input, InputNumber } from "antd";
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const FormContact = () => {
-
   const layout = {
     labelCol: {
       span: 8,
@@ -28,19 +28,26 @@ const FormContact = () => {
   };
 
   const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
+  const [name, setName] = useState("wadaw");
   const [messages, setMessages] = useState("");
+  // const [phone, setphone] = useState("");
+  // const [address, setaddress] = useState("");
+  // const [website, setWebsite] = useState("");
 
-  const postMessage = async (e) => {
-    e.preventDefault();
+  const postMessage = async (data, e) => {
     try {
-      const result = await axios.post(`http://localhost:3000/posts`, {
+      const result = await axios.post(`http://localhost:3000/messages`, {
         email: email,
         name: name,
-        message: messages,
+        description: messages,
       });
+
       if (result) {
-        console.log(result);
+        console.log("ini result", result);
+        toast("Thankyouuuu!")
+        setName("");
+        setEmail("");
+        setMessages("");
       }
     } catch (error) {
       console.log(error);
@@ -51,10 +58,9 @@ const FormContact = () => {
     <div className="text-white">
       <h2 className="text-4xl mb-4 text-center">Contact me</h2>
       <Form
-        onSubmit={postMessage}
         {...layout}
         name="nest-messages"
-        onFinish={onFinish}
+        onFinish={postMessage}
         style={{
           maxWidth: 600,
         }}
@@ -71,7 +77,7 @@ const FormContact = () => {
             },
           ]}
         >
-          <Input onChange={(e) => setName(e.target.value)} />
+          <Input value={name} onChange={(e) => setName(e.target.value)} />
         </Form.Item>
         <Form.Item
           name={["email"]}

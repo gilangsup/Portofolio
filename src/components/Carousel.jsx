@@ -23,7 +23,7 @@ export default class CenterMode extends Component {
         data-aos="fade-right"
         className="text-white container px-20 py-20 w-full"
       >
-        <div>
+        <div className="cursor-pointer">
           <h2 className="my-10 text-4xl text-center">Technology Skills</h2>
           <Slider {...settings}>
             <div>

@@ -1,8 +1,79 @@
 {
-    "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode", "name": "alu", "email": "jaja@gmail.com", "message": "jajajajja" }
-    ]
-  }
-  
-
-  
+  "messages": [
+    {
+      "email": "gilanggg@gmail.com",
+      "name": "gilang",
+      "address": "adawid",
+      "website": "wiiaopjaopwf",
+      "description": "wiohdiwahiduawdawd",
+      "phone": "awdawdawdo;j",
+      "id": 2
+    },
+    {
+      "email": "gilanggg@gmail.com",
+      "name": "gilang",
+      "message": "Keren bang!",
+      "id": 3
+    },
+    {
+      "email": "gilanggg@gmail.com",
+      "name": "gilang",
+      "message": "awdawdhakwduh",
+      "id": 4
+    },
+    {
+      "email": "gilan231ggg@gmail.com",
+      "name": "gilang",
+      "message": "awdawdhakwduhawdaw",
+      "id": 5
+    },
+    {
+      "email": "gijaw@gmail.com",
+      "name": "g123123",
+      "message": "lahlu",
+      "id": 6
+    },
+    {
+      "email": "gijaw@gmail.com",
+      "name": "g123123",
+      "message": "cuiteir",
+      "id": 7
+    },
+    {
+      "email": "nui@gmail.com",
+      "name": "nanana",
+      "message": "ajwdyuawgdiawdm",
+      "id": 8
+    },
+    {
+      "email": "mess@gmail.com",
+      "name": "",
+      "description": "message nih bang",
+      "id": 9
+    },
+    {
+      "email": "astaga@gmail.com",
+      "name": "kiimcill",
+      "description": "coba nih masuk gak?",
+      "id": 10
+    },
+    {
+      "email": "",
+      "name": "astaga",
+      "description": "",
+      "id": 11
+    },
+    {
+      "email": "ijwijwi@gmail.com",
+      "name": "awdawd",
+      "description": "wkdiwjidwjid",
+      "id": 12
+    },
+    {
+      "email": "wada@gmail.com",
+      "name": "wdaw",
+      "description": "wadaww",
+      "id": 13
+    }
+  ]
+}
